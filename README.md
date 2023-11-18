@@ -30,3 +30,7 @@ Como interface do usuário, utilizei o Plotter disponibilizado pelo Thonny IDE, 
 # Modelo Físico
 
 <img src="img/modelo_fisico.jpeg">
+
+<img src="img/modelofisicosensor.jpeg">
+
+<img src="img/modelofisicoplaca.jpeg">
