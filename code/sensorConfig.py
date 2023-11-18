@@ -1,8 +1,8 @@
 
-# Endereço I2C padrão do sensor TCS34725
+# Endereço I2C do TCS34725
 TCS34725_I2C_ADDR = 0x29
 
-# Comandos de controle do sensor
+# Controle do sensor
 TCS34725_CMD = 0x80
 TCS34725_CMD_AUTO_INC = 0xA0
 
@@ -21,10 +21,10 @@ TCS34725_REG_BDATAH = 0x1B
 
 # Configuração do sensor
 def configure_sensor(i2c):
-    i2c.writeto_mem(TCS34725_I2C_ADDR, TCS34725_REG_ENABLE | TCS34725_CMD, bytes([0x03]))  # Ativa o sensor
-    i2c.writeto_mem(TCS34725_I2C_ADDR, TCS34725_REG_ATIME | TCS34725_CMD, bytes([0xEB]))    # Configura o tempo de integração
+    i2c.writeto_mem(TCS34725_I2C_ADDR, TCS34725_REG_ENABLE | TCS34725_CMD, bytes([0x03]))  
+    i2c.writeto_mem(TCS34725_I2C_ADDR, TCS34725_REG_ATIME | TCS34725_CMD, bytes([0xEB]))
 
-# Leitura dos valores de cor
+# Operação de leitura das cores
 def read_color_values(i2c):
     color_data = i2c.readfrom_mem(TCS34725_I2C_ADDR, TCS34725_REG_CDATAL | TCS34725_CMD_AUTO_INC, 8)
     clear = color_data[1] << 8 | color_data[0]

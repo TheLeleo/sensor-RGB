@@ -2,13 +2,13 @@ from machine import I2C, Pin
 import utime
 from sensorConfig import *
 
-# Configuração da comunicação I2C
+# comunicação I2C
 i2c = I2C(0, scl=Pin(5), sda=Pin(4), freq=400000)
 
-# Configuração inicial do sensor
+# Configurar sensor i2c
 configure_sensor(i2c)
 
-# Loop principal
+# loop de execução do programa
 while True:
     clear, vermelho, verde, azul = read_color_values(i2c)
     
@@ -20,6 +20,3 @@ while True:
     print('R',r,'G',g,'B',b)
     
     utime.sleep(1)
-
-
-
