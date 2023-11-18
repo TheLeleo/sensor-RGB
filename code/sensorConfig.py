@@ -25,11 +25,11 @@ def configure_sensor(i2c):
     i2c.writeto_mem(TCS34725_I2C_ADDR, TCS34725_REG_ATIME | TCS34725_CMD, bytes([0xEB]))
 
 # Operação de leitura das cores
-def read_color_values(i2c):
-    color_data = i2c.readfrom_mem(TCS34725_I2C_ADDR, TCS34725_REG_CDATAL | TCS34725_CMD_AUTO_INC, 8)
-    clear = color_data[1] << 8 | color_data[0]
-    red = color_data[3] << 8 | color_data[2]
-    green = color_data[5] << 8 | color_data[4]
-    blue = color_data[7] << 8 | color_data[6]
+def escanear_cores(i2c):
+    cor_escaneada = i2c.readfrom_mem(TCS34725_I2C_ADDR, TCS34725_REG_CDATAL | TCS34725_CMD_AUTO_INC, 8)
+    clear = cor_escaneada[1] << 8 | cor_escaneada[0]
+    vermelho = cor_escaneada[3] << 8 | cor_escaneada[2]
+    verde = cor_escaneada[5] << 8 | cor_escaneada[4]
+    azul = cor_escaneada[7] << 8 | cor_escaneada[6]
 
-    return clear, red, green, blue
+    return clear, vermelho, verde, azul
