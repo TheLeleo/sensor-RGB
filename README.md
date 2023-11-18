@@ -12,6 +12,11 @@ Este repositório foi criado com o intuito de realizar a entrega da atividade "I
 
 <img src="img/pico_w_pinos_1.jpg" width="200px">
 
+# Tecnologias Utilizadas
+
+- Thonny IDE
+- MicroPython
+
 # Interface Gráfica do Usuário
 
 <img src="img/grafico.png">
