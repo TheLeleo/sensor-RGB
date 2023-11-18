@@ -1,4 +1,4 @@
-# sensor RGB
+# sensor RGB TCS34725
  
 Este repositório foi criado com o intuito de realizar a entrega da atividade "Implementação de um Sistema de Comunicação Entre Computador e Sistema Embarcado"
 
@@ -26,3 +26,7 @@ Como interface do usuário, utilizei o Plotter disponibilizado pelo Thonny IDE, 
 | GND | GND |  
 | SCL | GP5 | 
 | SDA | GP4 | 
+
+# Modelo Físico
+
+<img src="img/modelo_fisico.jpeg">
